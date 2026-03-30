@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #fff;
+}
+
+.app-container {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center content */
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.controls input {
+  width: 60px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #121212;
+  color: #eee;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+button {
+  padding: 8px 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #00ff00, #009900);
+  box-shadow: 0 0 12px #00ff00;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ff00;
+}
+
+.stop-btn {
+  background: linear-gradient(135deg, #ff0000, #990000);
+  box-shadow: 0 0 12px #ff0000;
+}
+
+.stop-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff0000;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  gap: 4px;
+  background-color: #111;
+  padding: 8px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 25px #000;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center; /* center grid */
+}
+
+/* Cells */
+.cell {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #222;
+  font-weight: bold;
+  user-select: none;
+  transition: all 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #fff;
+}
+
+.cell.green {
+  background: #00ff00;
+  border: 2px solid #0d0d0d;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.cell.blue {
+  background: #1e90ff;
+  border: 2px solid #0d0d0d;
+  box-shadow: 0 0 10px #1e90ff;
+}
+
+.cell.red {
+  background: #ff0033;
+  border: 2px solid #0d0d0d;
+  box-shadow: 0 0 12px #ff0033;
+}
+
+.cell:not(.green):not(.blue):not(.red) {
+  background: #222;
+  border: 1px solid #111;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cell {
+    width: 24px;
+    height: 24px;
+    font-size: 0.6rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  button {
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cell {
+    width: 20px;
+    height: 20px;
+    font-size: 0.55rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
