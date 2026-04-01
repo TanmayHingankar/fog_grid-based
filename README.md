@@ -11,4 +11,3 @@ npm run dev
 ## Deploy Vercel
 Connect GitHub repo to Vercel dashboard.
 
-BLACKBOXAI Contribution
